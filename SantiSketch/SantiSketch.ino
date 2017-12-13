@@ -50,7 +50,7 @@ boolean isSomeoneHome = false; //create boolean to see if anyone is home downsta
 
 float temp1;
 float temp2;
-const double setTemp = 19.50;
+const double setTemp = 20.00;
 const double UPPER_OFFSET = 0.5;
 const double LOWER_OFFSET = 0.5;
 boolean basementTooHot = false;
@@ -64,7 +64,7 @@ char buffer[6];
 void setup() {
   
   
- setTime(23,44,0,15,4,16); // set time to 23:44 on 15 April 2016 (24hr clock)
+ setTime(2,9,0,8,3,17); // set time to 02:09 on 8 March 2017 (24hr clock)
  pinMode(led, OUTPUT);
  pinMode(pirPin, INPUT);     //Set motion sensor pin as input
  pinMode(Relay, OUTPUT);     //Set Pin12(relay pin) as output
@@ -238,7 +238,7 @@ void updateTimeParameters()
  
 
     
-    if (((hour()) >= 9) && ((hour()) < 19)) //choose the time on the left when the boiler goes off in the daytime, then on the right set the time it comes back on in evening.
+    if (((hour()) >= 9) && ((hour()) < 18)) //choose the time on the left when the boiler goes off in the daytime, then on the right set the time it comes back on in evening.
     {
       isWorkingHours = true;
     }
